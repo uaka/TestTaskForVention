@@ -1,0 +1,23 @@
+{
+  "name": "TestTaskForVeniton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.1.0",
+    "@types/chai": "^4.3.11",
+    "@types/cucumber": "^7.0.0",
+    "@types/node": "^20.11.24",
+    "chai": "^4.3.10",
+    "cucumber-html-reporter": "^5.5.1",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.41.2",
+    "@playwright/test": "^1.x.x",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "test": "cucumber-js",
+    "test:only": "cucumber-js --tags @only"
+  }
+}
