@@ -63,7 +63,8 @@ yarn test:only
 
 After test execution, reports will be available in the following directories:
 - HTML report: `reports/cucumber-report.html`
-- Allure report: `allure-report/`
+- Allure report: `allure-report/` run 'yarn allure'
+
 
 ## Features
 

@@ -15,6 +15,10 @@ module.exports = {
         ],
         paths: ['features/**/*.feature'],
         parallel: 1,
-        timeout: 10000
+        timeout: 10000,
+        format: ["allure-cucumberjs/reporter"],
+        formatOptions: {
+            resultsDir: "allure-results",
+        },
     },
 };
