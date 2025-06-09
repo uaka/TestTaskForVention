@@ -1,7 +1,5 @@
-// src/world/customWorld.ts
 import { setWorldConstructor, World, IWorldOptions } from '@cucumber/cucumber';
 import { Browser, BrowserContext, Page } from '@playwright/test';
-import { launchBrowser, createContext, createPage } from '../config/browserConfig';
 
 export interface ICustomWorld extends World {
     browser?: Browser;
@@ -20,12 +18,6 @@ export class CustomWorld extends World implements ICustomWorld {
 
     constructor(options: IWorldOptions) {
         super(options);
-    }
-
-    async init() {
-        this.browser = await launchBrowser();
-        this.context = await createContext(this.browser);
-        this.page = await createPage(this.context);
     }
 }
 

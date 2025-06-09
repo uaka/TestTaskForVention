@@ -8,23 +8,10 @@ Given('I am on the login page', async function () {
     expect(title).toContain('OrangeHRM');
 });
 
-When('I enter valid credentials', async function () {
-    await this.page.fill('input[name="username"]', 'Admin');
-    await this.page.fill('input[name="password"]', 'admin123');
-    await this.page.click('button[type="submit"]');
-});
-
-When('I enter username {string}', async function (username) {
-    console.log(`Entering username: ${username}`);
+When('I enter username {string} and password {string} and submit', async function (username, password) {
     await this.page.fill('input[name="username"]', username);
-});
-
-When('I enter password {string}', async function (password) {
     await this.page.fill('input[name="password"]', password);
-});
-
-When('I click the login button', async function () {
-    await this.page.locator('button[type="submit"]').click();
+    await this.page.click('button[type="submit"]');
 });
 
 Then('I should be logged in successfully', async function () {
